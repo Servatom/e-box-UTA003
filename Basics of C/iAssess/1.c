@@ -12,6 +12,6 @@ int main(){
   scanf("%d",&l);
   x=x+(l/2);
   y=y+(l/2);
-  printf("The centre of the ground is at %c%d,%d%c",s,x,y,ss);
+  printf("The centre of the room is at %c%d,%d%c",s,x,y,ss);
   return 0;
 }
