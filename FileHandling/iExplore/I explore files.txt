@@ -1,0 +1,87 @@
+1. When fopen() is not able to open a file, it returns
+Ans: NULL
+
+2. getc() returns EOF when
+   A) End of files is reached
+   B) When getc() fails to read a character
+Ans: Both A and B
+
+3. The text file "Sample.txt" consists of the following text:
+   True peace is not merely the absence of tension.
+
+   Determine the output when the following is executed:
+   #include <stdio.h>
+   #include <stdlib.h> 
+   int main()
+   {
+    FILE *fptr; 
+    char filename[100], c; 
+    fptr = fopen("Sample.txt", "r");
+    if (fptr == NULL)
+    {
+     printf("Cannot open file \n");
+     exit(0);
+    }
+    c = fgetc(fptr);
+    while (c != EOF)
+    {
+     printf ("%c", c);
+     c = fgetc(fptr);
+    } 
+    fclose(fptr);
+    return 0;
+   }
+Ans: True peace is not merely the absence of tension.
+
+4. The code below read from your keyboard input until an ENTER is pressed, convert any lower case letter to upper case, and then write it to    a file:
+
+   L1: ch=getchar(); 
+   L2: while (ch!='\n') {
+   L3: if (ch>='a' and ch<='z')
+   L4: ch=ch-'A'+'a';
+   L5: fputc(ch,fp); 
+   L6: ch=getchar();
+   L7: }
+   L8: fclose(fp);
+   
+   Which line(s) is/are incorrect ?
+Ans: L3 L4
+
+5. What is the meant by ‘a’ in the following operation?
+   fp = fopen(“Random.txt”, “a”);
+Ans: Append
+
+6. Which of the following fopen statements are illegal?
+Ans: None of the mentioned
+
+7. Which of the following true about FILE *fp ?
+Ans: FILE is a structure and fp is a pointer to the structure of FILE type
+
+8. FILE is of type ______ ?
+Ans: struct type
+
+9. The text file "Sample.txt" consists of the following text:
+   True peace is not merely the absence of tension.
+
+   Determine the output when the following is executed:
+   #include <stdio.h>
+   int main()
+   { 
+    int i; 
+    char c; 
+    FILE *fptr; 
+    fptr=fopen("Sample.txt","r"); 
+    for(i=0; i<14; i++) { 
+     c=fgetc(fptr); 
+     if (i>7) 
+      putchar(c); 
+     } 
+    fclose(fptr);
+   }
+Ans: ce is
+
+10. For binary files, a ___ must be appended to the mode string.
+Ans: "b"
+ 
+ 
+ 
